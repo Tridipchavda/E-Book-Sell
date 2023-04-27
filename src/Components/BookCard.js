@@ -56,24 +56,23 @@ export const BookCard = () => {
 
     return (
         <center>
-        <div style={{width:"80%",display:"flex",flexWrap:"wrap",marginTop:"20px"}}>
+        <div className="allCards" >
         {bookData.map((ele,index) => {
             if(ele.book_name==null){
                 return ""
             }
             // console.log(index,ele.book_id);
             return (
-                <div className="card " key={index} style={{ width: "15rem",margin:"15px" }}>
-                    <img src={ele.image} onClick={()=>goToProductDetails(ele.book_id)} className="card-img-top" alt="..." height="260px"/>
+                <div className="card bookCard" key={index}>
+                    <img src={ele.image} onClick={()=>goToProductDetails(ele.book_id)} className="card-img-top" alt="..." height="280px"/>
                     <div className="card-body text-start" style={{ marginTop: "-5px" }}>
                         <p className="card-title m-0">{ele.book_name}</p>
-                        <p className="text-muted m-0">Adventure</p>
+                        <p className="text-muted m-0">{ele.category}</p>
                         
                         <h4 className="card-text my-1">{ele.book_price}Rs</h4>
                     </div>
-                    <div className="py-2">
-                        <button type="button" className="btn btn-outline-info btn-lg mx-1" style={{ fontSize: "14px",marginTop:"-10px",width:"150px" }} value={ele.book_id} onClick={(e)=>{handleAddToCart(e)}}>Add To Cart</button>
-                        
+                    <div className="py-3">
+                        <button type="button" className="btn btn-outline-info btn-lg mx-1 addToCartBtn" value={ele.book_id} onClick={(e)=>{handleAddToCart(e)}}>Add To Cart</button>
                     </div>
                 </div>
             )

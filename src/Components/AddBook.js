@@ -124,23 +124,16 @@ export default function AddBook() {
 
   return (
     <center>
-      <div
-        style={{
-          width: "70%",
-          padding: "5px",
-          height: "75vh",
-          marginTop: "30px",
-        }}
-      >
+      <div className="addBookDiv">
         <section className="vh-100">
-          <div className="container-fluid h-custom">
-            <div className="row d-flex justify-content-center align-items-center h-100">
+          <div className="container-fluid h-custom rounded">
+            <div className="row d-flex justify-content-center align-items-center h-100 rounded">
               <div className="col-md-9 col-lg-6 col-xl-3">
                 <img
                   src={bookImage == "" ? sampleBookCover : bookImage}
                   width="300px"
                   height="400px"
-                  className="border mt-5 p-2 border-warning"
+                  className="border mt-5 p-2 border-warning rounded bookView"
                   //   alt="Sample image"
                   onError={handleImageError}
                 />
@@ -231,12 +224,7 @@ export default function AddBook() {
                     <button
                       onClick={handleSubmitForm}
                       type="button"
-                      className="btn btn-primary btn-sm"
-                      style={{
-                        padding: "3px 12px",
-                        width: "300px",
-                        fontSize: "20px",
-                      }}
+                      className="btn btn-primary btn-sm addBookBtn"
                     >
                       {loading ? "Please Wait..." : "Submit"}
                     </button>

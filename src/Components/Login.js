@@ -49,29 +49,11 @@ export const Login = () => {
                     <div className="container-fluid h-custom">
                         <div className="row d-flex justify-content-center align-items-center h-100">
                             <div className="col-md-9 col-lg-6 col-xl-5">
-                                <img src="https://img.freepik.com/premium-vector/online-library-people-reading-books-smartphone-with-reader-app-online-book-store-library-education-flat-concept-illustration-education-book-app-digital-bookshelf-students_53562-11803.jpg?w=2000"
-                                    className="img-fluid" alt="Sample image" />
+                                <img className="logInPageVector" src="https://img.freepik.com/premium-vector/online-library-people-reading-books-smartphone-with-reader-app-online-book-store-library-education-flat-concept-illustration-education-book-app-digital-bookshelf-students_53562-11803.jpg?w=2000"
+                                 alt="Sample image" width="450px" height="450px" />
                             </div>
                             <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                                 <form>
-                                    <div className="d-flex flex-row my-3 align-items-center justify-content-center justify-content-lg-start">
-                                        <p className="lead fw-normal mb-0 me-3">Sign in with</p>
-                                        <button type="button" className="btn btn-primary btn-floating mx-1">
-                                            <i className="fab fa-facebook-f"></i>
-                                        </button>
-
-                                        <button type="button" className="btn btn-primary btn-floating mx-1">
-                                            <i className="fab fa-twitter"></i>
-                                        </button>
-
-                                        <button type="button" className="btn btn-primary btn-floating mx-1">
-                                            <i className="fab fa-linkedin-in"></i>
-                                        </button>
-                                    </div>
-
-                                    <div className="divider d-flex align-items-center my-4">
-                                        <p className="text-center fw-bold mx-3 mb-0">Or</p>
-                                    </div>
                                     <div className="form-outline mb-4">
                                         <input type="email" onChange={(e)=>{setEmail(e.target.value)}} value={email} className="form-control form-control-sm"
                                        
@@ -85,11 +67,31 @@ export const Login = () => {
                                     </div>
 
                                     <div className="text-center text-lg-start mt-1 pt-2 ">
-                                        <button onClick={handleSubmitForm} type="button" className="btn btn-primary btn-sm" style={{padding:"3px 12px",width:"290px",fontSize:"20px"}}>{loading?"Please Wait...":"Log In"}</button>
+                                        <button onClick={handleSubmitForm} type="button" className="btn btn-primary btn-sm logInButton">{loading?"Please Wait...":"Log In"}</button>
                                         <p className="small fw-bold mt-2 pt-1 mb-0">Don't have an account? 
                                         <a href="/register" className="link-danger" > Register</a></p>
                                     </div>
 
+                                    <div className="divider d-flex my-4" >
+                                        <p style={{alignItems:"center"}} className="text-center fw-bold mx-3 mb-0">Or</p>
+                                    </div>
+
+                                    <div className="d-flex flex-row my-3 align-items-center justify-content-center justify-content-lg-start">
+                                        <b className="lead mb-0 me-3">Sign in with</b>
+                                        <button type="button" className="btn btn-primary btn-floating mx-1">
+                                            <i className="fab fa-facebook-f"></i>
+                                        </button>
+
+                                        <button type="button" className="btn btn-primary btn-floating mx-1">
+                                            <i className="fab fa-twitter"></i>
+                                        </button>
+
+                                        <button type="button" className="btn btn-primary btn-floating mx-1">
+                                            <i className="fab fa-linkedin-in"></i>
+                                        </button>
+                                    </div>
+
+                                   
                                 </form>
                             </div>
                         </div>

@@ -59,12 +59,12 @@ export default function SeeSelfBooks() {
 
   return (
     <>
-    <h3 className="m-3" style={{textAlign:"left"}}>
+    <h3 className="selfBookH1 m-3" style={{textAlign:"left"}}>
       Book Uploaded By You
     </h3>
     <hr></hr>
     <center>
-    <div style={{width:"80%"}}>
+    <div className="selfBookTable"> 
       <Table hover >
         <thead className="thead-light">
           <tr>

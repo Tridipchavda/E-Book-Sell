@@ -1,0 +1,164 @@
+@media (min-width:501px) and (max-width:990px) {
+    .orderBox{
+      width: 18rem;
+      overflow: hidden;
+    }
+    .orderBox p{
+      font-size: 12px;
+  
+    }
+    /* Navbar */
+    .allLinks{
+      margin: auto;
+      display: none;
+    }
+    .userAcart{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .allLinks .dropdown button{
+      padding: 5px 10px;
+      margin: 10px 0px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .userAcart a button{
+      font-size: 14px;
+      padding: 5px 0px;
+      width: 60px;
+    }
+    .userAcart img{
+      width: 20px;
+      height: 20px;
+    }
+    .navbar-toggler{
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgb(255, 207, 50);
+    }
+    .navbar-toggler-icon{
+      width: 120%;
+      height: 100%;
+    }
+    .lead{
+      font-size: 16px;
+    }
+    /* Store Page */
+    
+    .bookFilterForm{
+      width: 340px;
+      margin: 20px 100px;
+      margin-right: -20px;
+      padding-left: 15px;
+    }
+    
+    select{
+      width:120px;
+      padding: 4px;
+      margin: 0px;
+      font-size: 16px;
+      border: 1px solid gray;
+      border-radius: 4px;
+    }
+    .bookCard{
+      width: 19rem;
+      margin-left:10px;
+      margin-top: 10px;
+      max-height: 37rem;
+     }
+     .bookCard img{
+      height: 370px;
+     }
+     .bookCard p{
+      font-size: 18px;
+     }
+     .bookCard h4{
+      font-size: 24px;
+     }
+     .allCards{
+      width:90%;
+    }
+    .addToCartBtn{
+      font-size: 16px;
+      margin-top:-20px;
+      width:220px;
+    }
+    /* Product Buy Page*/
+    .product{
+      width: 900px;
+      padding: 0px;
+    }
+    .product .rowFlex{
+      display: flex;
+      width: 590px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .rowFlex .col-md-6{
+      width: 900px;
+    }
+    .product img{
+      width: 280px;
+      height: 400px;
+    }
+    .product .card{
+      box-shadow: 1px 1px 5px #fecb34;
+    }
+    .product p{
+      font-size: 18px;
+      padding: 3px 20px;
+    }
+    .product h5,h3{
+      margin-left: 20px;
+      font-size: 30px;
+    }
+    .productName{
+      margin-left: 20px;
+    }
+    .butt button{
+      width: 200px;
+      font-size:20px;
+    }
+    .butt{
+      padding: 0px 50px;
+    }
+    .prod{
+      text-align: left;
+      margin-right: 10px;
+    }
+    /* Cart Page */
+    .cartBook{
+      width: 340px;
+      margin-top: 4px;
+    }
+    .cartBook img{
+      height: 200px;
+    }
+    .cartH1{
+      color: rgba(52, 52, 52, 0.703);
+    }
+    .cartBook h4{
+      font-size: 18px;
+      margin: 0px;
+      margin-top: 10px;
+    }
+    .cartBook h1{
+      font-size: 22px;
+      margin: 0;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .cartBook button{
+      width: 120px;
+      font-size: 14px;
+    }
+    /* Order Box*/
+    
+    .orderBox{
+      width: 18rem;
+      margin: 5px 5px;
+    }
+  }
+  

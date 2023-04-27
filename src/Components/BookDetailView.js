@@ -68,14 +68,13 @@ const handleAddToCart = async(e) =>{
 }
   
   return (
-    <div className="container mt-5 mb-5">
+    <div className="container product mt-5 mb-5">
       <div className="row d-flex justify-content-center">
         <div className="col-md-10">
           <div
             className="card border py-2"
-            style={{ boxShadow: "2px 2px 10px #f5e050" }}
           >
-            <div className="row">
+            <div className="row rowFlex">
               <div className="col-md-6">
                 <div className="images py-3">
                   <div className="text-center py-4">
@@ -92,8 +91,7 @@ const handleAddToCart = async(e) =>{
               </div>
               <div className="col-md-6">
                 <div
-                  className="product py-2"
-                  style={{ textAlign: "left", marginRight: "50px" }}
+                  className="prod py-2"
                 >
                   <div className="cart w-full" style={{ textAlign: "right" }}>
                     {" "}
@@ -102,7 +100,7 @@ const handleAddToCart = async(e) =>{
                   </div>
                   <div className="mt-2 mb-3">
                     {" "}
-                    <span className="text-uppercase text-muted brand">
+                    <span className="productName text-uppercase text-muted brand">
                       {params.id}
                     </span>
                     <h5 className="text-uppercase">
@@ -135,10 +133,9 @@ const handleAddToCart = async(e) =>{
                     rhoncus. Sed sit amet neque pharetra, varius sapien id,
                     feugiat nulla.
                   </p>
-                  <div className="m-1">
+                  <div className="butt m-1">
                     <button
                       className="btn btn-outline-info mt-2 mx-2"
-                      style={{ width: "160px", fontSize: "22px" }}
                       data-bs-toggle="modal" data-bs-target="#exampleModal"
                     >
                       Buy Now
@@ -146,7 +143,6 @@ const handleAddToCart = async(e) =>{
 
                     <button
                       className="btn btn-outline-danger mt-2 mx-2"
-                      style={{ width: "160px", fontSize: "22px" }}
                       value={product != undefined ? product.book_id : 0}
                       onClick={(e) => handleAddToCart(e)}
                     >

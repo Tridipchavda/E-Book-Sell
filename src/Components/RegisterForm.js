@@ -52,8 +52,8 @@ export const RegisterForm = () => {
                     <div className="container-fluid h-custom">
                         <div className="row d-flex justify-content-center align-items-center h-100">
                             <div className="col-md-9 col-lg-6 col-xl-5">
-                                <img src="https://images.freeimages.com/365/images/istock/previews/8334/83345199-online-library-mobile-app-education-concept-vector-illustration.jpg"
-                                    className="img-fluid" alt="Sample image" />
+                                <img className="signInVector" src="https://images.freeimages.com/365/images/istock/previews/8334/83345199-online-library-mobile-app-education-concept-vector-illustration.jpg"
+                                   alt="Sample image" width="450px" height="450px" />
                             </div>
                             <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                                 <h5>Register Yourself</h5><br></br>
@@ -84,7 +84,7 @@ export const RegisterForm = () => {
 
 
                                     <div className="text-center text-lg-start mt-1 pt-2 ">
-                                        <button onClick={handleSubmitForm} type="button" className="btn btn-primary btn-sm" style={{padding:"3px 12px",width:"300px",fontSize:"20px"}}>{loading?"Please Wait...":"Submit"}</button>
+                                        <button onClick={handleSubmitForm} type="button" className="btn btn-primary btn-sm signInButton" >{loading?"Please Wait...":"Submit"}</button>
                                         <p className="small fw-bold mt-2 pt-1 mb-0">Have an account? 
                                         <a href="/" className="link-danger"> Log In</a></p>
                                     </div>

@@ -54,9 +54,9 @@ export default function Orders() {
             
             return (
             
-                <div className="d-flex flex-row border border-warning p-3 rounded" key={index} style={{ width: "20rem",margin:"25px" }}>
+                <div className="d-flex flex-row border border-warning p-3 rounded orderBox" key={index}>
                     
-                    <img src={ele.image} className="card-img-left" alt="..." height="180px" width="140px" />
+                    <img src={ele.image} className="card-img-left" alt="..." height="190px" width="140px" />
                     <div className="card-body text-start" style={{ marginTop: "-15px" }}>
                         <p className='m-0' style={{fontSize:"14px"}}>Order Id </p>
                         <p className="text-muted d-inline-block text-truncate" onClick={copyOrderID} style={{textAlign:"center",maxWidth:"150px",cursor:"pointer"}}>{ele.orderId}</p>

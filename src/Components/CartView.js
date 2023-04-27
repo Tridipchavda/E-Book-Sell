@@ -75,7 +75,7 @@ function CartView() {
 
   return (
     <>
-      <h1 className=" m-3" style={{ textAlign: "left" }}>
+      <h1 className="cartH1 m-3" style={{ textAlign: "left" }}>
         Books Added To Cart
       </h1>
       <hr></hr>
@@ -86,7 +86,7 @@ function CartView() {
             if (ele != undefined) {
               return (
                 <div className="row py-2 px-2 " key={ele.book_id}>
-                  <div style={{ width: "400px" }}>
+                  <div className="cartBook">
                     <div className="card">
                       <div className="row card-body">
                         <img
@@ -100,21 +100,18 @@ function CartView() {
                           style={{ justifyContent: "start", textAlign: "left" }}
                         >
                           <h4>{ele.book_name}</h4>
-                          <br></br>
                           <h1>{ele.book_price}Rs</h1>
 
                           <div className="m-1">
-                            <a
+                            <button
                               className="btn btn-outline-info mt-2"
-                              style={{ width: "160px" }}
                               onClick={() => goToProductDetails(ele.book_id)}
                             >
                               Buy Now
-                            </a>
+                            </button>
 
                             <button
-                              className="btn btn-outline-danger mt-2"
-                              style={{ width: "160px" }}
+                              className="btn btn-outline-danger mt-2"      
                               onClick={() => {
                                 deleteCartItem(ele.book_id);
                               }}

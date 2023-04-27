@@ -41,8 +41,8 @@ export const SearchBar = () => {
     }
   return (
     <center>
-    <div className="d-flex flex-row" style={{width:"800px"}}>
-      <div style={{ width: "600px", marginTop: "20px" }}>
+    <div className="d-flex flex-row filterDiv" >
+      <div className="bookFilterForm">
         <form className="d-flex">
           <input
             className="form-control me-2"
@@ -56,7 +56,7 @@ export const SearchBar = () => {
       </div>
       <div>
       <form className="d-flex mx-5 my-4" style={{height:"34px"}}>
-            <select className="custom-select" onChange={sortTheData} style={{width:"200px"}} defaultValue="0">
+            <select className="custom-select" onChange={sortTheData} defaultValue="0">
                 <option value="0">Sort Books</option>
                 <option value="1">Sort by A-Z</option>
                 <option value="2">Sort by Z-A</option>

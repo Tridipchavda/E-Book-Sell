@@ -13,10 +13,9 @@ export const Navbar = () => {
     setLink,
   } = useContext(bookContext);
 
-
-  const doSafeLogout = ()=>{
+  const doSafeLogout = () => {
     localStorage.clear();
-  }
+  };
   const [margin, setMargin] = useState();
 
   useEffect(() => {
@@ -24,27 +23,65 @@ export const Navbar = () => {
     console.log(activeLink);
   });
 
+  const doAvail = () => {
+    var links = document.getElementById("navbarNavAltMarkup");
+    var brand = document.getElementById("brand");
+    var toggler = document.getElementById("toggler");
+    var container = document.getElementById("container-fluid");
+
+    if(window.innerWidth<=500){
+      if (links.style.display == "flex") {
+        links.style.display = "none";
+        brand.style.display = "flex";
+        toggler.style.marginRight = "0px";
+        container.style.flexDirection = "row";
+      } else {
+        links.style.display = "flex";
+        brand.style.display = "none";
+        toggler.style.marginRight = "250px";
+        container.style.flexDirection = "column";
+      }
+    }
+
+    else if(window.innerWidth<=900){
+      if (links.style.display == "flex") {
+        links.style.display = "none";
+        brand.style.display = "flex";
+        toggler.style.marginRight = "0px";
+        container.style.flexDirection = "row";
+      } else {
+        links.style.display = "flex";
+        brand.style.display = "none";
+        toggler.style.marginRight = "700px";
+        container.style.flexDirection = "column";
+      }
+    }
+    
+    
+  };
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-light "
+      className="navbar navbar-expand-lg navbar-light"
       style={{ backgroundColor: "#fddc4a" }}
     >
-      <div className="container-fluid">
-        <a className="navbar-brand mx-3" href="#">
+      <div className="container-fluid" id="container-fluid">
+        <a className="navbar-brand mx-3" id="brand" href="#">
           E Book Sell
         </a>
         <button
           className="navbar-toggler"
+          id="toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup"
           aria-expanded="false"
+          onClick={doAvail}
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className=" " style={{ float: "right" }} id="navbarNavAltMarkup">
+        <div className="allLinks" id="navbarNavAltMarkup">
           <div className="navbar-nav mx-5">
             <a
               className={activeLink == 0 ? "nav-link active" : "nav-link"}
@@ -59,10 +96,10 @@ export const Navbar = () => {
               Terms
             </a>
             <a
-                className={activeLink == 5 ? "nav-link active" : "nav-link"}
-                href="#"
+              className={activeLink == 5 ? "nav-link active" : "nav-link"}
+              href="#"
             >
-                About
+              About
             </a>
             {user == "" ? (
               ""
@@ -74,36 +111,49 @@ export const Navbar = () => {
                 >
                   Orders
                 </a>
-                <li className="nav-item dropdown">
-                  <button className="btn mx-2 border border-dark nav-link dropdown-toggle"
-                    id="navbarDropdown"
-                    role="button"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                        {user}
-                  </button>
-                  
-                  <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a className="dropdown-item" href="/addBook">
-                      Add Book
-                    </a>
-                    <a className="dropdown-item" href="/selfBooks">
-                      View Your Books
-                    </a>
-                    <div className="dropdown-divider"></div>
-                    <a className="dropdown-item" onClick={doSafeLogout} href="/">Log Out</a>
-                  </div>
-                </li>
-                
-                <a href="/cart">
-                  <button className="btn mx-1 border border-dark">
-                    <img src={cart} width="25px" height="24px"></img>
-                    &nbsp;
-                    {cartNo != 0 ? cartNo - 1 : " "}
-                  </button>
-                </a>
+
+                <div className="userAcart">
+                  <li className="nav-item dropdown">
+                    <button
+                      className="btn mx-2 border border-dark nav-link dropdown-toggle"
+                      id="navbarDropdown"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      {user}
+                    </button>
+
+                    <div
+                      className="dropdown-menu"
+                      aria-labelledby="navbarDropdown"
+                    >
+                      <a className="dropdown-item" href="/addBook">
+                        Add Book
+                      </a>
+                      <a className="dropdown-item" href="/selfBooks">
+                        View Your Books
+                      </a>
+                      <div className="dropdown-divider"></div>
+                      <a
+                        className="dropdown-item"
+                        onClick={doSafeLogout}
+                        href="/"
+                      >
+                        Log Out
+                      </a>
+                    </div>
+                  </li>
+
+                  <a href="/cart">
+                    <button className="btn mx-1 border border-dark">
+                      <img src={cart} width="25px" height="24px"></img>
+                      &nbsp;
+                      {cartNo != 0 ? cartNo - 1 : " "}
+                    </button>
+                  </a>
+                </div>
               </>
             )}
           </div>

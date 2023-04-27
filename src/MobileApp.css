@@ -1,0 +1,211 @@
+@media (max-width:500px) {
+    /* Navbar */
+    .allLinks{
+      margin: auto;
+      display: none;
+    }
+    .userAcart{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .allLinks .dropdown button{
+      padding: 5px 10px;
+      margin: 10px 0px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .userAcart a button{
+      font-size: 12px;
+      padding: 5px 0px;
+      width: 60px;
+    }
+    .userAcart img{
+      width: 20px;
+      height: 20px;
+    }
+    .navbar-toggler{
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgb(255, 207, 50);
+    }
+    .navbar-toggler-icon{
+      width: 120%;
+      height: 100%;
+    }
+    .lead{
+      font-size: 16px;
+    }
+    /* Order Box*/
+  
+    .orderBox{
+      width: 16rem;
+      margin: 10px 10px;
+    }
+    .orderBox img{
+      width: 120px;
+      height: 160px;
+    }
+    .orderBox h4{
+      font-size: 20px;
+      
+    }
+    .orderBox h5{
+      font-size: 14px;
+    }
+  
+    /* Log IN Page*/
+    .logInPageVector{
+      width: 160px;
+      height: 160px;
+      margin-bottom: 20px;
+    }
+    .logInButton{
+      padding:3px 12px;
+      width:220px;
+      font-size:18px;
+    }
+  
+    /* Sign IN Page*/
+    .signInVector{
+      width: 160px;
+      height: 160px;
+      margin-bottom: 10px;
+    }
+    .signInButton{
+      padding:3px 12px;
+      width:220px;
+      font-size:18px;
+    }
+    /* Store Page*/
+    .bookFilterForm{
+      width: 240px;
+      margin-top:20px;
+      margin-left:10px;
+      margin-right: -40px;
+      padding-left: 15px;
+    }
+    .bookFilterForm form{
+      height: 35px;
+      
+    }
+    select{
+      width:80px;
+      padding: 0;
+      margin: 0px;
+      font-size: 12px;
+      border: 1px solid gray;
+      border-radius: 4px;
+    }
+    .bookCard{
+      width: 9rem;
+      margin-left:2px;
+      margin-top: 5px;
+      max-height: 21rem;
+     }
+     .bookCard img{
+      height: 180px;
+     }
+     .bookCard p{
+      font-size: 12px;
+     }
+     .allCards{
+      width:90%;
+    }
+    .addToCartBtn{
+      font-size: 12px;
+      margin-top:-40px;
+      width:100px
+    }
+    /* Cart Page */
+    .cartBook{
+      width: 170px;
+      height: 330px;
+      margin-top: 4px;
+    }
+    .cartBook img{
+      height: 150px;
+    }
+    .cartH1{
+      font-size: 20px;
+      color: rgba(52, 52, 52, 0.703);
+    }
+    .cartBook h4{
+      font-size: 12px;
+      margin: 0px;
+      margin-top: 10px;
+    }
+    .cartBook h1{
+      font-size: 18px;
+      margin: 0;
+      margin-top: 10px;
+    }
+    .cartBook button{
+      width: 90px;
+      font-size: 12px;
+      margin: 0;
+    }
+  
+    /* Product Buy Page*/
+    .product{
+      width: 300px;
+      padding: 0px;
+    }
+    .product img{
+      width: 200px;
+      height: 280px;
+    }
+    .product .card{
+      box-shadow: 1px 1px 5px #fecb34;
+    }
+    .product p{
+      font-size: 12px;
+      padding: 3px 10px;
+    }
+    .product h5,h3{
+      margin-left: 20px;
+    }
+    .productName{
+      margin-left: 20px;
+    }
+    .butt button{
+      width: 100px;
+      font-size:14px;
+    }
+    .butt{
+      padding: 0px 20px;
+    }
+    .prod{
+      text-align: left;
+      margin-right: 10px;
+    }
+    /* Add Book Page */
+    .addBookDiv{
+      width: 80%;
+      padding: 0px;
+      margin-top: 0px;
+    }
+    .bookView{
+      width: 200px;
+      height: 270px;
+      margin-bottom: 10px;
+    }
+    .addBookDiv div button{
+      width: 260px;
+      font-size: 18px;
+      padding: 5px;
+      margin-bottom: 50px;
+    }
+    .selfBookTable{
+      width: auto;
+    }
+    .selfBookTable{
+      font-size: 12px;
+    }
+    .selfBookTable button{
+      font-size: 10px;
+    }
+    .selfBookH1{
+      font-size: 20px;
+    }
+  }
