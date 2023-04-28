@@ -125,6 +125,7 @@ select{
   .orderBox{
     width: 16rem;
     margin: 10px 10px;
+    overflow: hidden;
   }
   .orderBox img{
     width: 120px;
